@@ -374,7 +374,7 @@
             <div class="col-12 col-lg-5 text-center">
               <div class="d-flex justify-content-center align-items-center">
                 <div class="">
-                  <video class="lazy"  width="auto" height="700vh" autoplay="" loop="" muted="" playsinline="">
+                  <video class="lazy" width="auto" height="700vh" autoplay="" loop="" muted="" playsinline="">
                     <source data-src=".\assets\img\video\mobile.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -396,7 +396,7 @@
             <div class="col-12 col-lg-5 text-center">
               <div class="d-flex justify-content-center align-items-center">
                 <div class="">
-                  <video class="lazy"  width="auto" height="700vh" autoplay="" loop="" muted="" playsinline="">
+                  <video class="lazy" width="auto" height="700vh" autoplay="" loop="" muted="" playsinline="">
                     <source data-src=".\assets\img\video\grocery.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -406,7 +406,7 @@
             <div class="col-12 col-lg-7 text-center">
               <div class="d-flex justify-content-center align-items-center mt-md-7">
                 <div>
-                  <video class="lazy"  autoplay="" width="100%" height="500vh" loop="" muted="" playsinline="">
+                  <video class="lazy" autoplay="" width="100%" height="500vh" loop="" muted="" playsinline="">
                     <source data-src=".\assets\img\video\tab-gro.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -418,7 +418,7 @@
             <div class="col-12 col-lg-5 text-center ">
               <div class="d-flex justify-content-center align-items-center">
                 <div>
-                  <video class="lazy"  width="auto" height="700vh" autoplay="" loop="" muted="" playsinline="">
+                  <video class="lazy" width="auto" height="700vh" autoplay="" loop="" muted="" playsinline="">
                     <source data-src=".\assets\img\video\mobile.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -428,7 +428,7 @@
             <div class="col-12 col-lg-7 text-center">
               <div class="d-flex justify-content-center align-items-center mt-md-7">
                 <div>
-                  <video class="lazy"  autoplay="" width="100%" height="500vh" loop="" muted="" playsinline="">
+                  <video class="lazy" autoplay="" width="100%" height="500vh" loop="" muted="" playsinline="">
                     <source data-src=".\assets\img\video\tab1.mp4" type="video/mp4">
                   </video>
                 </div>
@@ -1121,8 +1121,7 @@
                 <article class="post-style1 brd-rd20 overflow-hidden position-relative">
                   <div class="post-img overflow-hidden w-100">
                     <a class="d-block" href="blog-detail-image.html" title=""><img
-                        src="./assets/img/images/resources/post-2.jpg" alt="Post Image 1"
-                        class="img-fluid"></a>
+                        src="./assets/img/images/resources/post-2.jpg" alt="Post Image 1" class="img-fluid"></a>
                   </div>
                   <div class="post-info w-100 position-relative">
                     <a class="brd-rd10 text-uppercase" href="javascript:void(0);" title="">Optimization</a>
@@ -1317,32 +1316,32 @@
   </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function() {
-  var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+    document.addEventListener("DOMContentLoaded", function () {
+      var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
 
-  if ("IntersectionObserver" in window) {
-    var lazyVideoObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(video) {
-        if (video.isIntersecting) {
-          for (var source in video.target.children) {
-            var videoSource = video.target.children[source];
-            if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-              videoSource.src = videoSource.dataset.src;
+      if ("IntersectionObserver" in window) {
+        var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (video) {
+            if (video.isIntersecting) {
+              for (var source in video.target.children) {
+                var videoSource = video.target.children[source];
+                if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                  videoSource.src = videoSource.dataset.src;
+                }
+              }
+
+              video.target.load();
+              video.target.classList.remove("lazy");
+              lazyVideoObserver.unobserve(video.target);
             }
-          }
+          });
+        });
 
-          video.target.load();
-          video.target.classList.remove("lazy");
-          lazyVideoObserver.unobserve(video.target);
-        }
-      });
+        lazyVideos.forEach(function (lazyVideo) {
+          lazyVideoObserver.observe(lazyVideo);
+        });
+      }
     });
-
-    lazyVideos.forEach(function(lazyVideo) {
-      lazyVideoObserver.observe(lazyVideo);
-    });
-  }
-});
   </script>
   <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
   <script src="assets/js/purpose.core.js"></script>
