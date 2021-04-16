@@ -1,0 +1,435 @@
+/* ##################### start portfolio area  ###########################   */
+    .button-group {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+  
+      .button-group button {
+        width: auto;
+        height: auto;
+        margin: 0px 10px 10px 0px;
+        flex-grow: 1;
+        padding: 10px;
+      }
+  
+      .button-group button:hover {
+        background: linear-gradient(120deg, #cc99ff, #9999ff);
+        box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+        color: white;
+        transition: 0.4s;
+      }
+  
+      .left-col-brand {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+      }
+  
+      .left-col-brand .image-brand {
+        padding: 10px;
+        text-align: center;
+        margin: 10px;
+        width: auto;
+        height: 5rem;
+        cursor: pointer;
+        transition: transform .4s ease;
+        border: 1px solid gray;
+        justify-content: center;
+      }
+  
+      .left-col-brand .image-brand:hover {
+        box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+        transform: scale(1.2);
+        transition: 0.3s;
+      }
+  
+      .left-col-brand .image-brand:hover>img {
+        filter: brightness(0.15);
+      }
+  
+      .exp1 {
+        background: linear-gradient(120deg, #cc99ff, #9999ff);
+        height: auto;
+        box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+      }
+  
+      .exp-area {
+        padding-left: 20px;
+      }
+  
+      .text-right {
+        font-size: 4rem;
+      }
+  
+      .img:hover {
+        box-shadow: 0px 10px 30px rgba(57, 56, 61, 0.205);
+        transition: 0.4s;
+        background: black;
+      }
+  
+  
+      /* active toggel classes on buttons  */
+      /* Style the buttons */
+        .btn01 {
+          border: none;
+          outline: none;
+          padding: 10px 16px;
+          background-color: #f1f1f1;
+          cursor: pointer;
+          font-size: 18px;
+        }
+  
+        /* Style the active class, and buttons on mouse-over */
+        .active01, .btn01:hover {
+          background: linear-gradient(120deg, #cc99ff, #9999ff);
+  
+          color: white;
+        }
+
+
+
+/* ##################### endd portfolio area  ###########################   */
+
+
+/* ############################  start Procedurwe area  ############################### */
+
+#infographic .circle {
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    border: 2px solid currentColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    position: absolute;
+    left: 50%;
+  }
+
+  #infographic :not(:nth-child(even)) .circle {
+    transform: translateX(-145%);
+    margin-top: 47px;
+
+  }
+
+  #infographic .circle i {
+    font-size: 5em;
+    margin-bottom: 20px;
+    color: currentColor;
+  }
+
+  #infographic article {
+    max-width: 410px;
+    margin-bottom: 57px;
+    cursor: pointer;
+    left: 38%;
+    position: relative;
+  }
+
+  #infographic article header {
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  #infographic article header i {
+    display: flex;
+    font-size: 2em;
+    border-radius: 50%;
+    background-clip: padding-box;
+    padding: 14px;
+    transition: transform 0.4s;
+    color: #fff;
+    border: 16px solid var(--bgColor);
+    margin: -16px 0 -16px -20px;
+  }
+
+  #infographic article header h6 {
+    text-transform: uppercase;
+    margin: 15px 23px;
+    padding: 5px;
+  }
+
+  #infographic article .body {
+    background: var(--bgColor);
+    padding: 0 20px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    max-height: 0;
+    transition: max-height 0.5s, padding 0.5s;
+    overflow: hidden;
+  }
+
+  #infographic article .body .btn {
+    padding: 3px 10px;
+    text-transform: uppercase;
+  }
+
+  #infographic :nth-child(even) article {
+    text-align: right;
+    transform: translateX(-100%);
+  }
+
+  #infographic :nth-child(even) article header {
+    flex-flow: row-reverse;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+  }
+
+  #infographic :nth-child(even) article header i {
+    margin: -16px -20px -16px 0;
+  }
+
+  #infographic article[data-step="1"] {
+    margin-left: 0px;
+  }
+
+  #infographic article[data-step="2"] {
+    margin-left: 50px;
+  }
+
+  #infographic article[data-step="3"] {
+    margin-left: 46px;
+  }
+
+  #infographic article[data-step="4"] {
+    margin-left: 0;
+  }
+
+  #infographic article[data-step="5"] {
+    margin-left: -34px;
+  }
+
+  #infographic article[data-step="6"] {
+    margin-left: -80px;
+  }
+
+  #infographic article[data-step="7"] {
+    margin-left: -96px;
+  }
+
+  #infographic article[data-step="8"] {
+    margin-left: -60px;
+  }
+
+  #infographic article[data-step="9"] {
+    margin-left: 0;
+  }
+
+  #infographic article[data-step="10"] {
+    margin-left: 36px;
+  }
+
+  #infographic article[data-step="11"] {
+    margin-left: 60px;
+  }
+
+  #infographic article[data-step="12"] {
+    margin-left: 22px;
+  }
+
+  #infographic article[data-step="13"] {
+    margin-left: -86px;
+  }
+
+  /* #infographic article[data-step="14"] {
+    margin-left: 30px;
+  }
+
+  #infographic article[data-step="15"] {
+    margin-left: -50px;
+  }
+
+  #infographic article[data-step="16"] {
+    margin-left: -168px;
+  } */
+
+  #infographic .one article header {
+    background-color: rgb(150 172 255 / 30%);
+    color: #8f2543;
+  }
+
+  #infographic .one article header i {
+    background-color: #007bff;
+  }
+
+  #infographic .two article header {
+    background-color: rgba(0, 108, 99, 0.1);
+    color: #006c63;
+  }
+
+  #infographic .two article header i {
+    background-color: #28a745;
+  }
+
+  #infographic .three article header {
+    background-color: rgb(255 95 9 / 10%);
+    color: #ff4a02;
+  }
+
+  #infographic .three article header i {
+    background-color: #dc3545;
+  }
+
+  #infographic article:hover header i {
+    transform: scale(1.2);
+  }
+
+  #infographic article.active header {
+    border-bottom-right-radius: 0;
+  }
+
+  #infographic article.active header i {
+    --opacity: 0.4;
+    transform: scale(1) !important;
+  }
+
+  #infographic article.active .body {
+    padding: 20px;
+    max-height: 300px;
+    border: 1px solid;
+  }
+
+  #infographic .two article.active header {
+    border-bottom-left-radius: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    /* 1 area  */
+    #infographic :not(:nth-child(even)) .circle {
+      transform: translateX(-50%);
+    }
+
+    #infographic article[data-step="1"] {
+      margin-left: -39%;
+      margin-top: 375px;
+    }
+
+    #infographic article[data-step="2"] {
+      margin-left: -160px;
+    }
+
+    #infographic article[data-step="3"] {
+      margin-left: -160px;
+    }
+
+    #infographic article[data-step="4"] {
+      margin-left: -158px;
+    }
+
+    /* 2 area  */
+    #infographic :not(:nth-child(odd)) .circle {
+      transform: translateX(-56%);
+    }
+
+    #infographic article[data-step="5"] {
+      margin-left: 257px;
+      margin-top: 24pc;
+    }
+
+    #infographic article[data-step="6"] {
+      margin-left: 254px;
+    }
+
+    #infographic article[data-step="7"] {
+      margin-left: 254px;
+    }
+
+    #infographic article[data-step="8"] {
+      margin-left: 253px;
+    }
+
+
+
+    /* 3 area  */
+    #infographic article[data-step="9"] {
+      margin-left: -170px;
+      margin-top: 23pc;
+    }
+
+    #infographic article[data-step="10"] {
+      margin-left: -168px;
+    }
+
+    #infographic article[data-step="11"] {
+      margin-left: -168px;
+    }
+
+    #infographic article[data-step="12"] {
+      margin-left: -170px;
+    }
+
+    #infographic article[data-step="13"] {
+      margin-left: -178px;
+    }
+  }
+
+  @media only screen and (max-width: 425px) {
+
+    #infographic article {
+      max-width: 410px;
+      margin-bottom: 57px;
+      cursor: pointer;
+      left: 17%;
+      position: relative;
+    }
+
+    #infographic .circle {
+      width: 230px;
+      height: 227px;
+    }
+
+
+    #infographic article header {
+      border-top-right-radius: 30px;
+      border-bottom-right-radius: 30px;
+      width: 268px;
+    }
+
+    #infographic article[data-step="1"] {
+      margin-top: 273px;
+      margin-right: 92px;
+    }
+
+    #infographic article[data-step="2"] {
+      margin-left: -106px;
+    }
+
+    #infographic article[data-step="3"] {
+      margin-left: -106px;
+    }
+
+    #infographic article[data-step="4"] {
+      margin-left: -106px;
+    }
+
+
+  }
+
+  /* ############################  end Procedurwe area  ############################### */
+
+  /* ############################  start technology area  ############################### */
+
+
+#card-4, #card-3, #card-2, #card-1  {
+   border: 2px solid rgb(255, 255, 255);
+}
+#card-1:hover{
+    border: 2px solid #9b00ff;
+}
+#card-2:hover{
+    border: 2px solid #ffab00;
+}
+#card-3:hover{
+    border: 2px solid #00b8d9;
+}
+#card-4:hover{
+    border: 2px solid #36b37e;
+}
+#card-5:hover{
+    border: 2px solid #ff0000;
+}
+
+  /* ############################  end technology area  ############################### */

@@ -1,0 +1,70 @@
+ 
+ div.laptop-wrapper {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 67.5%;
+    height: 0;
+}
+div.laptop-wrapper iframe {
+    box-sizing: border-box;
+    background: url(https://i.stack.imgur.com/zZNgk.png) center center no-repeat;
+    background-size: contain;
+    padding: 11.9% 15.5% 14.8%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+ div.mobile-wrapper {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 67.5%;
+    height: 0;
+    /* <iframe width="560" height="315" src="//www.youtube.com/embed/f890SC1schE" frameborder="0" allowfullscreen></iframe> */
+}
+div.mobile-wrapper iframe {
+    box-sizing: border-box;
+    /* background: url(//www.youtube.com/embed/f890SC1schE) center center no-repeat; */
+    background-color: #00a8ff;
+    background-size: contain;
+    padding: 11.9% 15.5% 14.8%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+/* link to change image  */
+#card-button-1{
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 80px;
+
+  }
+    #card-button-1:hover{
+    border: 2px solid rgb(188, 42, 255);
+    border-radius: 80px;
+    transition: all 0.4s;
+    -webkit-box-shadow: 3px 3px 16px 0px rgba(168, 133, 177, 0.39);
+    -moz-box-shadow:    3px 3px 16px 0px rgba(168, 133, 177, 0.39);
+    box-shadow:         3px 3px 16px 0px rgba(168, 133, 177, 0.39);
+  }
+
+  .image-holder {
+      float: left;
+      margin-right: 100px;
+      display: block;
+      width: 350px;
+      height: 500px;
+      background-color: grey;
+    }
+
+    .list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      padding-top: 200px;  
+    }
